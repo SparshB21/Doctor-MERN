@@ -30,6 +30,7 @@ const ServiceCard = ({ item, index }) => {
             borderRadius: "6px 0 0 6px",
           }}
         >
+        
           {index + 1}
         </span>
       </div>
