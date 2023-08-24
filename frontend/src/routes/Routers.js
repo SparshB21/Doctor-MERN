@@ -12,7 +12,7 @@ function Routers() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Doctor-MERN" element={<Home />} />
+        {/* <Route path="/Doctor-MERN" element={<Home />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />

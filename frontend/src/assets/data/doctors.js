@@ -15,7 +15,7 @@ export const doctors = [
   },
   {
     id: "02",
-    name: "Dr. Saleh Mahmud",
+    name: "Dr. Sparsh Bansal",
     specialization: "Neurologist",
     avgRating: 4.8,
     totalRating: 272,
