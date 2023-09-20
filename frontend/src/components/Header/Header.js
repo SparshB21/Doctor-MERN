@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
 import {BrowserRouter as Router, NavLink, Link} from 'react-router-dom';
 import userImg from '../../assets/images/avatar-icon.png';
 import {BiMenu} from 'react-icons/bi';
@@ -76,11 +76,11 @@ const Header = () => {
             </div>
 
             <Link to="/login">
-              <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]">Login</button>
+              <button className="border py-2 px-6 text-primaryColor font-[600] h-[44px] flex items-center justify-center rounded-[5px] hover:bg-primaryColor hover:text-white">Login</button>
             </Link>
 
             <span className="md:hidden" onClick={toggleMenu}>
-              <BiMenu className="w-6 h-6 cursor-pointer" />
+              <BiMenu className="w-6 h-6 mt-2.5 cursor-pointer" />
             </span>
           </div>
         </div>

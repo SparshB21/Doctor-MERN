@@ -20,29 +20,29 @@ import Testimonial from "../components/Testimonial/Testimonial";
 const Home = () => {
   return (
     <>
-      {/* hero section */}
+      {/* hero section starts */}
       <section className="hero__section pt-[60px] 2xl:h-[800px]">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
-            {/* hero content */}
+            {/* hero content starts */}
 
             <div>
               <div className="lg:w-[570px]">
                 <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]">
                   We help patients live a healthy, longer life.
                 </h1>
-                <p className="text__para">
+                {/* <p className="text__para mt-2">
                   lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
                   lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
                   lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
                   lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                  lorem lorem{" "}
-                </p>
+                  lorem lorem
+                </p> */}
 
                 <button className="btn">Request an Appointment</button>
               </div>
 
-              {/* hero counter */}
+              {/* hero counter ends */}
 
               <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
                 <div>
@@ -50,24 +50,24 @@ const Home = () => {
                     {" "}
                     30+{" "}
                   </h2>
-                  <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Years of Experience</p>
+                  {/* <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]"></span> */}
+                  <p className="text__para text-yellowColor">Years of Experience</p>
                 </div>
                 <div>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                     {" "}
                     15+{" "}
                   </h2>
-                  <span className="w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Clinic Location</p>
+                  {/* <span className="w-[100px] h-2 bg-purpleColor rounded-full block mt-[-14px]"></span> */}
+                  <p className="text__para text-purpleColor">Clinic Location</p>
                 </div>
                 <div>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                     {" "}
                     100%{" "}
                   </h2>
-                  <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px]"></span>
-                  <p className="text__para">Patient Satisfaction</p>
+                  {/* <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px]"></span> */}
+                  <p className="text__para text-irisBlueColor">Patient Satisfaction</p>
                 </div>
               </div>
             </div>
@@ -86,6 +86,8 @@ const Home = () => {
       </section>
       {/* hero section ends */}
 
+
+      {/* quick links starts */}
       <section>
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
@@ -167,11 +169,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* quick links ends */}
 
       <About />
 
-      {/* services section */}
-
+      {/* services section starts */}
       <section>
         <div className="conatiner">
           <div className="xl:w-[470px] mx-auto">
@@ -185,11 +187,9 @@ const Home = () => {
           <ServiceList />
         </div>
       </section>
-
       {/* services section ends */}
 
-      {/* feature section */}
-
+      {/* feature section starts */}
       <section>
         <div className="container">
           <div className="flex items-center justify-between flex-col lg:flex-row">
@@ -250,10 +250,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* feature section ends */}
-      {/* Our great doctors */}
 
+      {/* Our great doctors starts */}
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -267,11 +266,9 @@ const Home = () => {
           <DoctorList />
         </div>
       </section>
-
       {/* Our great doctors ends */}
 
-      {/* faq section*/}
-
+      {/* faq section starts */}
       <section>
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
@@ -289,11 +286,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* faq section ends*/}
 
-      {/* Testimonial */}
-
+      {/* Testimonial section starts */}
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -307,8 +302,7 @@ const Home = () => {
           <Testimonial />
         </div>
       </section>
-
-      {/* Testimonial ends */}
+      {/* Testimonial section ends */}
     </>
   );
 };
