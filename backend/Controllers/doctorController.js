@@ -37,7 +37,9 @@ export const deleteDoctor = async (req, res) => {
 export const getSingleDoctor = async (req, res) => {
   const id = req.params.id;
   try {
-    const doctor = await Doctor.findById(id).select("-password"); // 'select' is used to minus the password from sending data to others;
+    const doctor = await Doctor.findById(id)
+      .populate("reviews")
+      .select("-password"); // 'select' is used to minus the password from sending data to others;
 
     res.status(200).json({
       success: true,
@@ -63,14 +65,15 @@ export const getAllDoctor = async (req, res) => {
         ],
       }).select("-password");
     } else {
-      doctors = await Doctor.find({isApproved: "approved"}).select("-password"); // 'select' is used to minus the password from sending data to others
+      doctors = await Doctor.find({ isApproved: "approved" }).select(
+        "-password"
+      ); // 'select' is used to minus the password from sending data to others
     }
-    
- 
+
     res.status(200).json({
       success: true,
       message: "Doctors Found",
-      data: doctors,
+      data: doctor,
     });
   } catch (err) {
     res.status(404).json({ success: false, message: "Not found" });
