@@ -1,7 +1,7 @@
 import React from "react";
 import { formateDate } from "../../utils/formatDate";
 
-const DoctorAbout = () => {
+const DoctorAbout = ({ name, about, qualifications, experiences }) => {
   return (
     <div>
       <div>
@@ -9,14 +9,10 @@ const DoctorAbout = () => {
           {" "}
           About of
           <span className="text-irisBlueColor font-bold text-[24px] leading-9">
-            Sparsh Bansal
+            {name}
           </span>
         </h3>
-        <p className="text__para">
-          hsdbcdbjccano jsisnlk jbjnsii nixsnoaxmosmx ninck cksci iinsisxks
-          jbinxksxiksj kj bxknsixnsi x isxljkskjxn bkj iu ki kj skj sai sjk csk
-          ksaj c
-        </p>
+        <p className="text__para">{about}</p>
       </div>
 
       <div className="mt-12">
@@ -26,32 +22,25 @@ const DoctorAbout = () => {
         </h3>
 
         <ul className="pt-4 md:p-5">
-          <li className="mb-[30px]">
-            <div>
-              <span className="text-irisBlueColor text-[15px] leading-6 font-semibold ">
-                {formateDate("07-30-2014")} - {formateDate("09-13-2016")}
-              </span>
-              <p className="text-[16px] leading-6 font-medium text-textColor ">
-                PHD in Surgeon
+          {qualifications?.map((item, index) => (
+            <li
+              key={index}
+              className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]"
+            >
+              <div>
+                <span className="text-irisBlueColor text-[15px] leading-6 font-semibold ">
+                  {formateDate(item.startingDate)} -{" "}
+                  {formateDate(item.endingDate)}
+                </span>
+                <p className="text-[16px] leading-6 font-medium text-textColor ">
+                  {item.degree}
+                </p>
+              </div>
+              <p className="text-[14px] leading-5 font-medium text-textColor ">
+                {item.university}
               </p>
-            </div>
-            <p className="text-[14px] leading-5 font-medium text-textColor ">
-              New Apollo Hospital, New York.
-            </p>
-          </li>
-          <li className="mb-[30px]">
-            <div>
-              <span className="text-irisBlueColor text-[15px] leading-6 font-semibold ">
-                {formateDate("12-04-2010")} - {formateDate("07-30-2014")}
-              </span>
-              <p className="text-[16px] leading-6 font-medium text-textColor ">
-                PHD in Surgeon
-              </p>
-            </div>
-            <p className="text-[14px] leading-5 font-medium text-textColor">
-              New Apollo Hospital, New York.
-            </p>
-          </li>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -61,20 +50,20 @@ const DoctorAbout = () => {
         </h3>
 
         <ul className=" grid sm:grid-cols-2 gap-[30px] pt-4 md:p-5">
+          {experiences?.map((item, index) => (
             <li className="p-4 rounded bg-[#fff9ea]">
-                <span className="text-yellowColor text-[15px] leading-6 font-semibold">{formateDate("07-04-2010")} - {formateDate("08-13-2014")}</span>
-                <p className="text-[15px] leading-6 font-medium text-textColor">Sr. Surgeon</p>
-                <p className="text-[16px] leading-5 font-medium text-textColor">
-              New Apollo Hospital, New York.
-            </p>
+              <span className="text-yellowColor text-[15px] leading-6 font-semibold">
+                {formateDate(item.startingDate)} -{" "}
+                {formateDate(item.endingDate)}
+              </span>
+              <p className="text-[15px] leading-6 font-medium text-textColor">
+                {item.position}
+              </p>
+              <p className="text-[16px] leading-5 font-medium text-textColor">
+                {item.hospital}
+              </p>
             </li>
-            <li className="p-4 rounded bg-[#fff9ea]">
-                <span className="text-yellowColor text-[15px] leading-6 font-semibold">{formateDate("07-04-2010")} - {formateDate("08-13-2014")}</span>
-                <p className="text-[15px] leading-6 font-medium text-textColor">Sr.Surgeon</p>
-                <p className="text-[16px] leading-5 font-medium text-textColor">
-              New Apollo Hospital, New York.
-            </p>
-            </li>
+          ))}
         </ul>
       </div>
     </div>
